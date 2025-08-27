@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Search Engine Optimization-->
+    <link rel="icon" href="./Images/logo.png">
+    <title>E-Grading Calculator</title>
+
+    <!--Elements Cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+
+    <!--Bootstrap CSS Cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css">
+
+    <!--Linked Files-->
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/responsive.css">
+</head>
+
+<body>
+
+    <!--Navigation Bar-->
+    <nav class="nav_bar">
+        <div class="containers">
+            <div class="d-flex flex-row align-items-center justify-content-between">
+                <p class="fs-3 fw-bold text-light">E-Grading Calculator</p>
+                <p class="text-light nav_bar_txt2">Calculate Your Grades, Anytime, Anywhere</p>
+                <div class="d-flex flex-row justify-content-between gap-4">
+                    <button class="rounded py-1 px-3 fs-5 fw-medium nav_bar_btn1 bg-light">English</button>
+                    <button class="rounded py-1 px-3 fs-5 fw-semibold fw-medium nav_bar_btn2">বাংলা</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--Body-->
+    <main class="body">
+        <div>
+            <div class="d-flex flex-column align-items-center gap-5">
+                <div class="d-flex flex-column align-items-center gap-1">
+                    <h1 class="fw-bold body_h1">WELCOME</h1>
+                    <h2 class="body_h2">To</h2>
+                    <h1 class="fw-bold body_h3 text-center">Grading Calculator</h1>
+                </div>
+                <p class="fw-bold text-danger fs-5">-- Fill Up Your Information Correctly --</p>
+                <div class="containers">
+                    <div class="d-flex flex-row justify-content-between gap-5">
+                        <div class="d-flex flex-column gap-4 body_rside bg-light rounded-4 body_slct">
+                            <p class="fw-bold fs-5 text-danger mx-auto">Enter Your Marks</p>
+                            <form class="d-flex flex-column justify-content-between gap-4">
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex flex-column align-item justify-content-between gap-3">
+                                        <p class="fw-bold fs-5 mx-auto">Subject</p>
+                                        <p class="fw-bold fs-5" id="bangla">Bangla</p>
+                                        <p class="fw-bold fs-5">English</p>
+                                        <p class="fw-bold fs-5">Math</p>
+                                        <p class="fw-bold fs-5">Higher Mathematics</p>
+                                        <p class="fw-bold fs-5">BGS</p>
+                                        <p class="fw-bold fs-5">Physics</p>
+                                        <p class="fw-bold fs-5">Chemistry</p>
+                                        <p class="fw-bold fs-5">Biology</p>
+                                        <p class="fw-bold fs-5">ICT</p>
+                                        <p class="fw-bold fs-5">Religion</p>
+                                        <p class="fw-bold fs-5">Physical Education</p>
+                                        <p class="fw-bold fs-5">Career Study</p>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-between gap-3 number">
+                                        <p class="fw-bold fs-5 mx-auto">Mark</p>
+                                        <input placeholder="Enter Your Mark" min="0" max="200" step="1" type="number"
+                                            required>
+                                        <input placeholder="Enter Your Mark" min="0" max="200" step="1" type="number"
+                                            required>
+                                        <input placeholder="Enter Your Mark" min="0" max="100" step="1" type="number"
+                                            required>
+                                        <input placeholder="Enter Your Mark" min="0" max="100" step="1" type="number"
+                                            required>
+                                        <input placeholder="Enter Your Mark" min="0" max="100" step="1" type="number"
+                                            required>
+                                        <input placeholder="Enter Your Mark" min="0" max="100" step="1" type="number"
+                                            required>
+                                        <input placeholder="Enter Your Mark" min="0" max="100" step="1" type="number"
+                                            required>
+                                        <input placeholder="Enter Your Mark" min="0" max="100" step="1" type="number"
+                                            required>
+                                        <input placeholder="Enter Your Mark" min="0" max="50" step="1" type="number"
+                                            required>
+                                        <input placeholder="Enter Your Mark" min="0" max="100" step="1" type="number"
+                                            required>
+                                        <input placeholder="Enter Your Mark" min="0" max="100" step="1" type="number"
+                                            required>
+                                        <input placeholder="Enter Your Mark" min="0" max="150" step="1" type="number"
+                                            required>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-between gap-3">
+                                        <p class="fw-bold fs-5 mx-auto">G.P.A</p>
+                                        <p class="fw-bold fs-5" id="bangla_g"></p>
+                                        <p class="fw-bold fs-5"></p>
+                                        <p class="fw-bold fs-5"></p>
+                                        <p class="fw-bold fs-5"></p>
+                                        <p class="fw-bold fs-5"></p>
+                                        <p class="fw-bold fs-5"></p>
+                                        <p class="fw-bold fs-5"></p>
+                                        <p class="fw-bold fs-5"></p>
+                                        <p class="fw-bold fs-5"></p>
+                                        <p class="fw-bold fs-5"></p>
+                                        <p class="fw-bold fs-5"></p>
+                                        <p class="fw-bold fs-5"></p>
+                                        <p class="fw-bold fs-5"></p>
+                                        <p class="fw-bold fs-5"></p>
+                                    </div>
+                                </div>
+                                <button
+                                    class="rounded py-1 px-3 fs-5 fw-semibold fw-medium body_cls_btn mx-auto" id="submit">Submit</button>
+                            </form>
+                        </div>
+                        <div class="d-flex flex-column justify-content-between gap-3">
+                            <div class="bg-light rounded-4 body_slct d-flex flex-column justify-content-center gap-5">
+                                <div class="d-flex flex-column align-items-center gap-3">
+                                    <p class="fw-bold fs-5 text-danger">Select Your Class</p>
+                                    <div class="d-flex flex-row gap-5">
+                                        <button
+                                            class="rounded py-1 px-3 fs-5 fw-semibold fw-medium body_cls_btn">SSC</button>
+                                        <button
+                                            class="rounded py-1 px-3 fs-5 fw-semibold fw-medium body_cls_btn">HSC</button>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column align-items-center gap-3">
+                                    <p class="fw-bold fs-5 text-danger">Select Your Division</p>
+                                    <div class="d-flex flex-row gap-5">
+                                        <button
+                                            class="rounded py-1 px-3 fs-5 fw-semibold fw-medium body_cls_btn">Science</button>
+                                        <button
+                                            class="rounded py-1 px-3 fs-5 fw-semibold fw-medium body_cls_btn">Commerce</button>
+                                        <button
+                                            class="rounded py-1 px-3 fs-5 fw-semibold fw-medium body_cls_btn">Arts</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-light rounded-4 body_slct d-flex align-items-center flex-column">
+                                <div class="d-flex flex-column align-items-center">
+                                    <p class="fw-bold fs-4">Your Final G.P.A</p>
+                                    <p class="fw-bold text-danger body_rslt_txt2">5.00</p>
+                                </div>
+                                <p class="fw-bold fs-4 text-center">Congratulations on your outstanding achievement!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--Footer Section-->
+    <footer class="foot">
+        <div class="containers">
+            <div class="d-flex flex-column align-items-center py-5 gap-4">
+                <h1 class="fw-bold body_h2 text-light">Thanks</h1>
+                <h2 class="body_h2 text-light">for using</h2>
+                <h1 class="fw-bold body_h2 text-light">E-Grading Calculator</h1>
+            </div>
+        </div>
+    </footer>
+
+    <!--Bootstrap JS Cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/js/bootstrap.min.js"></script>
+
+    <!--Linked Files-->
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

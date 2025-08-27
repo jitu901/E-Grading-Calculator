@@ -1,0 +1,138 @@
+/*Linked Items*/
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Hind+Siliguri:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Default CSS*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-weight: 400;
+    cursor: default;
+    scroll-behavior: smooth;
+    font-family: 'roboto';
+    color: var(--text);
+}
+
+:root {
+    --default: #f8f9fa;
+    --nav_bar: #124170;
+    --primary: #DDF4E7;
+    --text: #056085;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text);
+    cursor: pointer;
+}
+
+p {
+    margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+}
+
+.containers {
+    width: calc(100% - 200px);
+    margin: 0 auto;
+}
+
+/*Navigation Bar*/
+.nav_bar{
+    background: var(--nav_bar);
+    padding: 10px 0px;
+    position: fixed;
+    width: 100%;
+}
+
+.nav_bar_txt2{
+    font-family: 'Edu NSW ACT Cursive';
+}
+
+.nav_bar_btn1{
+    color: var(--nav_bar);
+    border: 2px solid var(--default);
+}
+
+.nav_bar_btn2{
+    font-family: 'Hind Siliguri';
+    background: none;
+    color: var(--default);
+    border: 2px solid var(--default);
+    transition: all linear 0.3s;
+}
+
+.nav_bar_btn2:hover{
+    background: var(--default);
+    color: var(--nav_bar);
+}
+
+/*Body*/
+.body{
+    background: var(--primary);
+    padding-top: 90px;
+    padding-bottom: 40px;
+}
+
+.body_h1{
+    font-size: 60px;
+}
+
+.body_h2{
+    font-size: 50px;
+    font-family: 'Edu NSW ACT Cursive';
+}
+
+.body_h3{
+    font-size: 60px;
+}
+
+.body_slct{
+    padding: 20px 50px;
+    width: 450px;
+}
+
+.body_cls_btn{
+    background: none;
+    color: var(--text);
+    border: 2px solid var(--text);
+    transition: all linear 0.3s;
+}
+
+.body_cls_btn:hover{
+    background: var(--text);
+    color: var(--default);
+}
+
+.body_rslt_txt2{
+    font-size: 100px;
+}
+
+.body1_h2{
+    width: 100%;
+    border-bottom: solid 1px var(--text);
+}
+
+.body_rside{
+    width: 100%;
+}
+
+.body1_rside_num{
+    width: 100%;
+}
+
+.number{
+    width: 131px;
+}
+
+/*Footer Section*/
+.foot{
+    background: var(--nav_bar);
+}

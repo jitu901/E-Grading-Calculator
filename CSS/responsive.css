@@ -1,0 +1,26 @@
+/*Minimum Width Devices*/
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 1400px) {}
+
+/*Maximum Width Devices*/
+@media (max-width: 162px) {}
+
+@media (max-width: 412px) {
+    
+    .containers{
+        width: calc(100% - 30px);
+    }
+}
+
+@media (max-width: 428px) {}
+
+@media (max-width: 884px) {}
+
+@media (max-width: 1280px) {}
