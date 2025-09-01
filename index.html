@@ -29,8 +29,8 @@
                 <p class="fs-3 fw-bold text-light">E-Grading Calculator</p>
                 <p class="text-light nav_bar_txt2">Calculate Your Grades, Anytime, Anywhere</p>
                 <div class="d-flex flex-row justify-content-between gap-4">
-                    <button class="rounded py-1 px-3 fs-5 fw-medium nav_bar_btn1 bg-light">English</button>
-                    <button class="rounded py-1 px-3 fs-5 fw-semibold fw-medium nav_bar_btn2">বাংলা</button>
+                    <button class="rounded py-1 px-3 fs-5 fw-medium nav_bar_btn1 bg-light" id="enlgish">English</button>
+                    <button class="rounded py-1 px-3 fs-5 fw-semibold fw-medium nav_bar_btn2" id="bangla">বাংলা</button>
                 </div>
             </div>
         </div>
@@ -45,106 +45,113 @@
                     <h2 class="body_h2">To</h2>
                     <h1 class="fw-bold body_h3 text-center">Grading Calculator</h1>
                 </div>
-                <p class="fw-bold text-danger fs-5">-- Fill Up Your Information Correctly --</p>
                 <div class="containers">
                     <div class="d-flex flex-row justify-content-between gap-5">
                         <div class="d-flex flex-column gap-4 body_rside bg-light rounded-4 body_slct">
-                            <p class="fw-bold fs-5 text-danger mx-auto">Enter Your Marks</p>
-                            <form class="d-flex flex-column justify-content-between gap-4">
-                                <div class="d-flex justify-content-between">
-                                    <div class="d-flex flex-column align-item justify-content-between gap-3">
-                                        <p class="fw-bold fs-5 mx-auto">Subject</p>
-                                        <p class="fw-bold fs-5" id="bangla">Bangla</p>
-                                        <p class="fw-bold fs-5">English</p>
-                                        <p class="fw-bold fs-5">Math</p>
-                                        <p class="fw-bold fs-5">Higher Mathematics</p>
-                                        <p class="fw-bold fs-5">BGS</p>
-                                        <p class="fw-bold fs-5">Physics</p>
-                                        <p class="fw-bold fs-5">Chemistry</p>
-                                        <p class="fw-bold fs-5">Biology</p>
-                                        <p class="fw-bold fs-5">ICT</p>
-                                        <p class="fw-bold fs-5">Religion</p>
-                                        <p class="fw-bold fs-5">Physical Education</p>
-                                        <p class="fw-bold fs-5">Career Study</p>
+                            <p class="fw-bold text-danger body_rslt_txt1 mx-auto my-auto" id="mark_enter_warn">Select
+                                Your Class and Group</p>
+                            <p class="fw-bold fs-5 text-danger mx-auto" id="marks">Enter Your Marks</p>
+                            <div id="input">
+                                <form class="d-flex flex-column justify-content-between gap-4">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex flex-column align-item justify-content-between gap-3">
+                                            <p class="fw-bold fs-5 mx-auto">Subject</p>
+                                            <p class="fw-bold fs-5">Bangla</p>
+                                            <p class="fw-bold fs-5">English</p>
+                                            <p class="fw-bold fs-5">Math</p>
+                                            <p class="fw-bold fs-5" id="bgs">BGS</p>
+                                            <p class="fw-bold fs-5" id="phy">Physics</p>
+                                            <p class="fw-bold fs-5" id="chem">Chemistry</p>
+                                            <p class="fw-bold fs-5">ICT</p>
+                                            <p class="fw-bold fs-5">Religion</p>
+                                            <p class="fw-bold fs-5">Physical Education</p>
+                                            <p class="fw-bold fs-5">Career Study</p>
+                                            <p class="fw-bold fs-5">Main Subject</p>
+                                            <p class="fw-bold fs-5">Optional Subject</p>
+                                        </div>
+                                        <div class="d-flex flex-column justify-content-between gap-3 number">
+                                            <p class="fw-bold fs-5 mx-auto">Mark</p>
+                                            <input placeholder="Enter Your Mark" min="0" max="200" step="1"
+                                                type="number" required id="s1m">
+                                            <input placeholder="Enter Your Mark" min="0" max="200" step="1"
+                                                type="number" required id="s2m">
+                                            <input placeholder="Enter Your Mark" min="0" max="100" step="1"
+                                                type="number" required id="s3m">
+                                            <input placeholder="Enter Your Mark" min="0" max="100" step="1"
+                                                type="number" required id="s4m">
+                                            <input placeholder="Enter Your Mark" min="0" max="100" step="1"
+                                                type="number" required id="s5m">
+                                            <input placeholder="Enter Your Mark" min="0" max="100" step="1"
+                                                type="number" required id="s6m">
+                                            <input placeholder="Enter Your Mark" min="0" max="50" step="1" type="number"
+                                                required id="s7m">
+                                            <input placeholder="Enter Your Mark" min="0" max="100" step="1"
+                                                type="number" required id="s8m">
+                                            <input placeholder="Enter Your Mark" min="0" max="100" step="1"
+                                                type="number" required id="s9m">
+                                            <input placeholder="Enter Your Mark" min="0" max="50" step="1" type="number"
+                                                required id="s10m">
+                                            <input placeholder="Enter Your Mark" min="0" max="100" step="1"
+                                                type="number" required id="s11m">
+                                            <input placeholder="Enter Your Mark" min="0" max="100" step="1"
+                                                type="number" required id="s12m">
+                                        </div>
+                                        <div class="d-flex flex-column justify-content-between gap-3">
+                                            <p class="fw-bold fs-5 mx-auto">G.P.A</p>
+                                            <p class="fw-bold fs-5" id="mark_warn">Enter all the marks to see G.P.A</p>
+                                            <p class="fw-bold fs-5" id="s1g"></p>
+                                            <p class="fw-bold fs-5" id="s2g"></p>
+                                            <p class="fw-bold fs-5" id="s3g"></p>
+                                            <p class="fw-bold fs-5" id="s4g"></p>
+                                            <p class="fw-bold fs-5" id="s5g"></p>
+                                            <p class="fw-bold fs-5" id="s6g"></p>
+                                            <p class="fw-bold fs-5" id="s7g"></p>
+                                            <p class="fw-bold fs-5" id="s8g"></p>
+                                            <p class="fw-bold fs-5" id="s9g"></p>
+                                            <p class="fw-bold fs-5" id="s10g"></p>
+                                            <p class="fw-bold fs-5" id="s11g"></p>
+                                            <p class="fw-bold fs-5" id="s12g"></p>
+                                        </div>
                                     </div>
-                                    <div class="d-flex flex-column justify-content-between gap-3 number">
-                                        <p class="fw-bold fs-5 mx-auto">Mark</p>
-                                        <input placeholder="Enter Your Mark" min="0" max="200" step="1" type="number"
-                                            required>
-                                        <input placeholder="Enter Your Mark" min="0" max="200" step="1" type="number"
-                                            required>
-                                        <input placeholder="Enter Your Mark" min="0" max="100" step="1" type="number"
-                                            required>
-                                        <input placeholder="Enter Your Mark" min="0" max="100" step="1" type="number"
-                                            required>
-                                        <input placeholder="Enter Your Mark" min="0" max="100" step="1" type="number"
-                                            required>
-                                        <input placeholder="Enter Your Mark" min="0" max="100" step="1" type="number"
-                                            required>
-                                        <input placeholder="Enter Your Mark" min="0" max="100" step="1" type="number"
-                                            required>
-                                        <input placeholder="Enter Your Mark" min="0" max="100" step="1" type="number"
-                                            required>
-                                        <input placeholder="Enter Your Mark" min="0" max="50" step="1" type="number"
-                                            required>
-                                        <input placeholder="Enter Your Mark" min="0" max="100" step="1" type="number"
-                                            required>
-                                        <input placeholder="Enter Your Mark" min="0" max="100" step="1" type="number"
-                                            required>
-                                        <input placeholder="Enter Your Mark" min="0" max="150" step="1" type="number"
-                                            required>
-                                    </div>
-                                    <div class="d-flex flex-column justify-content-between gap-3">
-                                        <p class="fw-bold fs-5 mx-auto">G.P.A</p>
-                                        <p class="fw-bold fs-5" id="bangla_g"></p>
-                                        <p class="fw-bold fs-5"></p>
-                                        <p class="fw-bold fs-5"></p>
-                                        <p class="fw-bold fs-5"></p>
-                                        <p class="fw-bold fs-5"></p>
-                                        <p class="fw-bold fs-5"></p>
-                                        <p class="fw-bold fs-5"></p>
-                                        <p class="fw-bold fs-5"></p>
-                                        <p class="fw-bold fs-5"></p>
-                                        <p class="fw-bold fs-5"></p>
-                                        <p class="fw-bold fs-5"></p>
-                                        <p class="fw-bold fs-5"></p>
-                                        <p class="fw-bold fs-5"></p>
-                                        <p class="fw-bold fs-5"></p>
-                                    </div>
-                                </div>
-                                <button
-                                    class="rounded py-1 px-3 fs-5 fw-semibold fw-medium body_cls_btn mx-auto" id="submit">Submit</button>
-                            </form>
+                                    <button class="rounded py-1 px-3 fs-5 fw-semibold fw-medium body_cls_btn mx-auto"
+                                        type="button" id="submit">Submit</button>
+                                </form>
+                            </div>
                         </div>
                         <div class="d-flex flex-column justify-content-between gap-3">
                             <div class="bg-light rounded-4 body_slct d-flex flex-column justify-content-center gap-5">
                                 <div class="d-flex flex-column align-items-center gap-3">
                                     <p class="fw-bold fs-5 text-danger">Select Your Class</p>
                                     <div class="d-flex flex-row gap-5">
-                                        <button
-                                            class="rounded py-1 px-3 fs-5 fw-semibold fw-medium body_cls_btn">SSC</button>
-                                        <button
-                                            class="rounded py-1 px-3 fs-5 fw-semibold fw-medium body_cls_btn">HSC</button>
+                                        <button class="rounded py-1 px-3 fs-5 fw-semibold fw-medium body_cls_btn"
+                                            id="ssc">SSC</button>
+                                        <button class="rounded py-1 px-3 fs-5 fw-semibold fw-medium body_cls_btn"
+                                            id="hsc">HSC</button>
                                     </div>
                                 </div>
                                 <div class="d-flex flex-column align-items-center gap-3">
-                                    <p class="fw-bold fs-5 text-danger">Select Your Division</p>
+                                    <p class="fw-bold fs-5 text-danger">Select Your Group</p>
                                     <div class="d-flex flex-row gap-5">
-                                        <button
-                                            class="rounded py-1 px-3 fs-5 fw-semibold fw-medium body_cls_btn">Science</button>
-                                        <button
-                                            class="rounded py-1 px-3 fs-5 fw-semibold fw-medium body_cls_btn">Commerce</button>
-                                        <button
-                                            class="rounded py-1 px-3 fs-5 fw-semibold fw-medium body_cls_btn">Arts</button>
+                                        <button class="rounded py-1 px-3 fs-5 fw-semibold fw-medium body_cls_btn"
+                                            id="science">Science</button>
+                                        <button class="rounded py-1 px-3 fs-5 fw-semibold fw-medium body_cls_btn"
+                                            id="commerce">Commerce</button>
+                                        <button class="rounded py-1 px-3 fs-5 fw-semibold fw-medium body_cls_btn"
+                                            id="arts">Arts</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="bg-light rounded-4 body_slct d-flex align-items-center flex-column">
-                                <div class="d-flex flex-column align-items-center">
-                                    <p class="fw-bold fs-4">Your Final G.P.A</p>
-                                    <p class="fw-bold text-danger body_rslt_txt2">5.00</p>
+                                <p class="fw-bold text-danger body_gpa_txt1 mx-auto my-auto" id="gpa_warn">
+                                    Fill Up Your Information Correctly</p>
+                                <div id="gpa">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <p class="fw-bold fs-4">Your G.P.A</p>
+                                        <p class="fw-bold text-danger body_rslt_txt2" id="grade">0.00</p>
+                                    </div>
+                                    <p class="fw-bold fs-4 text-center" id="cmnt">Don't give up! Work harder next time!
+                                    </p>
                                 </div>
-                                <p class="fw-bold fs-4 text-center">Congratulations on your outstanding achievement!</p>
                             </div>
                         </div>
                     </div>
