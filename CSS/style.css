@@ -26,6 +26,10 @@ a {
     cursor: pointer;
 }
 
+input{
+    cursor: text;
+}
+
 p {
     margin: 0px;
 }
@@ -49,6 +53,7 @@ h6 {
     background: var(--nav_bar);
     padding: 10px 0px;
     position: fixed;
+    z-index: 99;
     width: 100%;
 }
 
@@ -111,6 +116,10 @@ h6 {
     color: var(--default);
 }
 
+.body_rslt_txt1{
+    font-size: 40px;
+}
+
 .body_rslt_txt2{
     font-size: 100px;
 }
@@ -128,8 +137,33 @@ h6 {
     width: 100%;
 }
 
+.body_gpa_txt1{
+    font-size: 40px;
+    text-align: center;
+}
+
 .number{
     width: 131px;
+}
+
+#mark_warn{
+    width: 50px;
+    text-align: center;
+    color: red;
+    display: none;
+    transform: translateY(130px);
+}
+
+#marks{
+    display: none;
+}
+
+#input{
+    display: none;
+}
+
+#gpa{
+    display: none;
 }
 
 /*Footer Section*/
